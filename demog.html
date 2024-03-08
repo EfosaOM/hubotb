@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL+</title>
+  <style>
+    .header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .content {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .question {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    select {
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .gender-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .gender-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .gender-button:hover {
+      background-color: #0056b3;
+    }
+
+    .ethnicity-dropdown {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .submit-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="nfl-logo.png" alt="NFL Logo" class="logo">
+  </div>
+
+  <div class="content">
+    <h1>What's Your Story?</h1>
+    <p>Answer the questions below for your perfectly AI-tailored experience.</p>
+
+    <div class="question">
+      Birthday (mm/dd/yyyy)
+    </div>
+    <div class="input-container">
+      <input type="text" id="birthday" placeholder="Birthday (mm/dd/yyyy)">
+    </div>
+
+    <div class="question">
+      State
+    </div>
+    <div class="input-container">
+      <select id="state">
+        <option value="alabama">Alabama</option>
+        <option value="alaska">Alaska</option>
+        <option value="arizona">Arizona</option>
+        <option value="arkansas">Arkansas</option>
+        <option value="california">California</option>
+        <option value="colorado">Colorado</option>
+        <option value="connecticut">Connecticut</option>
+        <option value="delaware">Delaware</option>
+        <option value="florida">Florida</option>
+        <option value="georgia">Georgia</option>
+        <option value="hawaii">Hawaii</option>
+        <option value="idaho">Idaho</option>
+        <option value="illinois">Illinois</option>
+        <option value="indiana">Indiana</option>
+        <option value="iowa">Iowa</option>
+        <option value="kansas">Kansas</option>
+        <option value="kentucky">Kentucky</option>
+        <option value="louisiana">Louisiana</option>
+        <option value="maine">Maine</option>
+        <option value="maryland">Maryland</option>
+        <option value="massachusetts">Massachusetts</option>
+        <option value="michigan">Michigan</option>
+        <option value="minnesota">Minnesota</option>
+        <option value="mississippi">Mississippi</option>
+        <option value="missouri">Missouri</option>
+        <option value="montana">Montana</option>
+        <option value="nebraska">Nebraska</option>
+        <option value="nevada">Nevada</option>
+        <option value="new_hampshire">New Hampshire</option>
+        <option value="new_jersey">New Jersey</option>
+        <option value="new_mexico">New Mexico</option>
+        <option value="new_york">New York</option>
+        <option value="north_carolina">North Carolina</option>
+        <option value="north_dakota">North Dakota</option>
+        <option value="ohio">Ohio</option>
+        <option value="oklahoma">Oklahoma</option>
+        <option value="oregon">Oregon</option>
+        <option value="pennsylvania">Pennsylvania</option>
+        <option value="rhode_island">Rhode Island</option>
+        <option value="south_carolina">South Carolina</option>
+        <option value="south_dakota">South Dakota</option>
+        <option value="tennessee">Tennessee</option>
+        <option value="texas">Texas</option>
+        <option value="utah">Utah</option>
+        <option value="vermont">Vermont</option>
+        <option value="virginia">Virginia</option>
+        <option value="washington">Washington</option>
+        <option value="west_virginia">West Virginia</option>
+        <option value="wisconsin">Wisconsin</option>
+        <option value="wyoming">Wyoming</option>
+      </select>
+    </div>
+
+    <div class="question">
+      Gender
+    </div>
+    <div class="gender-container">
+      <button class="gender-button" onclick="selectGender('Male')">Male</button>
+      <button class="gender-button" onclick="selectGender('Female')">Female</button>
+      <button class="gender-button" onclick="selectGender('Non-binary')">Non-binary</button>
+      <button class="gender-button" onclick="selectGender('na')">N/A</button>
+
+    </div>
+
+    <div class="question">Ethnicity</div>
+    <div class="input-container">
+      <select class="ethnicity-dropdown" id="ethnicity">
+        <option value="white">White/Caucasian</option>
+        <option value="black">African American/Black</option>
+        <option value="hispanic">Hispanic/Latino</option>
+        <option value="asian">Asian</option>
+        <option value="native">Native American</option>
+        <option value="native">Other</option>
+        
+      </select>
+    </div>
+
+    <button class="skip-button" onclick="skipForm()">Skip</button>
+    <button class="submit-button" onclick="submitForm()">Submit</button>
+  </div>
+
+  <script>
+    function selectGender(gender) {
+      let input_genders = gender;
+      const buttons = document.querySelectorAll('.navigation-button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');}
+
+    function submitForm() {
+      window.location.href = 'interests.html';}
+    function skipForm() {
+      window.location.href = 'home.html';}
+  </script>
+</body>
+</html>

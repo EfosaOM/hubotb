@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Touchdown Buddy</title>
+  <style>
+    .header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .content {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .introduction {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .travis-image {
+      max-width: 300px;
+      max-height: 400px;
+      margin-bottom: 20px;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .start-button, .retry-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .start-button:hover, .retry-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="nfl-logo.png" alt="NFL Logo" class="logo">
+  </div>
+
+  <div class="content">
+    <h1>Introducing Your Touchdown Buddy(s)</h1>
+    <img src="traviskelce.png" alt="Travis Kelce" class="travis-image">
+    <p class="introduction"><br>
+      TE, Travis Kelce<br><br>
+      Considered one of the greatest tight ends of all time, Kelce is a nine-time Pro Bowler and a seven-time All-Pro, with 4 first-team and 3 second-team selections. Outside of football, Kelce has appeared on reality and scripted television and in advertisements and is in a very public relationship with singer-songwriter superstar Taylor Swift stimulating viewership and revenue for his team and its league.
+    </p>
+
+    <div class="buttons-container">
+      <button class="start-button" onclick="startExperience()">Great! Let's get started</button>
+      <button class="retry-button" onclick="retryExperience()">Retry</button>
+    </div>
+  </div>
+
+  <script>
+    function startExperience() {
+      window.location.href = 'home.html';
+    }
+
+    function retry() {
+      window.location.href = 'introtb.html';
+    }
+  </script>
+</body>
+</html>

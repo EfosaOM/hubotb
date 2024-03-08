@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL+</title>
+  <style>
+    .header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .content {
+      text-align: center;
+      font-size: 25px;
+      margin: 20px;
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .knowledge-level-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .knowledge-level-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="nfl-logo.png" alt="NFL Logo" class="logo">
+  </div>
+
+  <div class="content">
+    <h1>What's Your Story?</h1>
+    <p>Answer the questions below for your perfectly AI-tailored experience.</p>
+
+    <div class="question">
+      Football Knowledge Level
+    </div>
+
+    <div class="buttons-container">
+      <button class="knowledge-level-button" onclick="nextPage()">Rookie</button>
+      <button class="knowledge-level-button" onclick="nextPage()">Veteran</button>
+      <button class="knowledge-level-button" onclick="nextPage()">Pro</button>
+    </div>
+  </div>
+
+  <script>
+    function nextPage() {
+      window.location.href = 'demog.html';}
+  </script>
+</body>
+</html>

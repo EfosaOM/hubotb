@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL+</title>
+  <style>
+    .header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .content {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .question {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .submit-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="nfl-logo.png" alt="NFL Logo" class="logo">
+  </div>
+
+  <div class="content">
+    <h1>What's Your Story?</h1>
+    <p>Answer the questions below for your perfectly AI-tailored experience.</p>
+
+    <div class="question">
+    Hobbies/Interests
+    </div>
+    <div class="input-container">
+      <select id="hobbiesInterests" multiple>
+        <option value="travel">Travel</option>
+        <option value="volunteering">Volunteering</option>
+        <option value="moviesTvShows">Movies and TV Shows</option>
+        <option value="reading">Reading</option>
+      </select>
+    </div>
+
+    <button class="submit-button" onclick="submitForm()">Submit</button>
+  </div>
+
+  <script>
+    function submitForm() {
+      const selectedOption = document.getElementById('hobbiesInterests').value;
+      window.location.href = 'reveal.html';
+    }
+  </script>
+</body>
+</html>

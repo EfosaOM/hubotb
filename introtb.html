@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL+</title>
+  <style>
+    .header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .introduction {
+      text-align: center;
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .continue-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .continue-button:hover {
+      background-color: #0056b3;
+    }
+
+    .no-thanks-button {
+      background-color: #ccc;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .no-thanks-button:hover {
+      background-color: #bbb;
+    }
+
+    .navigation-button.active {
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="nfl-logo.png" alt="NFL Logo" class="logo">
+  </div>
+
+  <div class="introduction">
+    <h1>Introducing the Touchdown Buddy</h1>
+    <p>With our patent Generative AI technology, the Touchdown Buddy will tailor any user’s differences to their story, building a one-of-a-kind football-consuming experience. Please select below to see how your story unfolds with the NFL.</p>
+  </div>
+
+  <div class="button-container">
+    <button class="continue-button" onclick="redirectToknowlvlPage()">Continue</button>
+    <button class="no-thanks-button" onclick="sayNoThanks()">No Thanks</button>
+  </div>
+
+  <script>
+    function redirectToknowlvlPage() {
+      window.location.href = 'knowlvl.html';}
+
+    function sayNoThanks() {
+      window.location.href = 'home.html';}
+  </script>
+</body>
+</html>
